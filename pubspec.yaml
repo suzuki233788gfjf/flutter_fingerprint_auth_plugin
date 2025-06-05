@@ -1,6 +1,6 @@
 name: fingerprint_auth_plugin
 description: A Flutter plugin for easy biometric authentication (fingerprint and face recognition) on Android and iOS devices. Provides simple methods to check biometric availability and authenticate users securely
-version: 0.0.1
+version: 0.1.0
 homepage: https://github.com/suzuki233788gfjf/flutter_fingerprint_auth_plugin
 
 environment:
