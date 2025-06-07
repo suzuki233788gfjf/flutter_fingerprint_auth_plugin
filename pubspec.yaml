@@ -1,46 +1,31 @@
 name: fingerprint_auth_plugin
-description: A Flutter plugin for easy biometric authentication (fingerprint and face recognition) on Android and iOS devices. Provides simple methods to check biometric availability and authenticate users securely
-version: 0.1.0
+description: A Flutter plugin for easy biometric authentication (fingerprint and face recognition) on Android and iOS devices. Provides simple methods to check biometric availability and authenticate users securely.
+version: 0.1.1 # <<< IMPORTANT : Changez la version à 0.1.1 (ou 0.1.2 si vous avez déjà essayé 0.1.1)
 homepage: https://github.com/suzuki233788gfjf/flutter_fingerprint_auth_plugin
 
 environment:
-  sdk: ^3.7.2
+  sdk: '>=3.0.0 <4.0.0' # <<< J'ai mis une contrainte plus large pour le SDK Dart, comme recommandé pour les plugins
   flutter: '>=3.3.0'
 
 dependencies:
   flutter:
     sdk: flutter
- 
+
   plugin_platform_interface: ^2.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+  flutter_lints: ^6.0.0 # <<< J'ai mis à jour vers la version 6.0.0, car elle est disponible et améliore le score de linter.
 
 # The following section is specific to Flutter packages.
 flutter:
-  # This section identifies this Flutter project as a plugin project.
-  # The 'pluginClass' specifies the class (in Java, Kotlin, Swift, Objective-C, etc.)
-  # which should be registered in the plugin registry. This is required for
-  # using method channels.
-  # The Android 'package' specifies package in which the registered class is.
-  # This is required for using method channels on Android.
-  # The 'ffiPlugin' specifies that native code should be built and bundled.
-  # This is required for using `dart:ffi`.
-  # All these are used by the tooling to maintain consistency when
-  # adding or updating assets for this project.
   plugin:
     platforms:
-    # This plugin project was generated without specifying any
-    # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
-    # then add platforms following the instruction here:
-    # https://flutter.dev/to/pubspec-plugin-platforms
-      android: # Déclare le support Android
-        package: com.example.fingerprint_auth_plugin # Assurez-vous que c'est bien votre package Android
+      android:
+        package: com.example.fingerprint_auth_plugin # <<< Assurez-vous que c'est bien votre package Android
+        pluginClass: FingerprintAuthPlugin
+      ios:
         pluginClass: FingerprintAuthPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
