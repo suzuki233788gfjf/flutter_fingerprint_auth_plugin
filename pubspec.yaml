@@ -16,7 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0 # <<< J'ai mis à jour vers la version 6.0.0, car elle est disponible et améliore le score de linter.
+  flutter_lints: ^5.0.0 # <<< J'ai mis à jour vers la version 6.0.0, car elle est disponible et améliore le score de linter.
 
 # The following section is specific to Flutter packages.
 flutter:
