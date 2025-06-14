@@ -23,7 +23,23 @@ abstract class FingerprintAuthPluginPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  // >>> Déclarations des méthodes que vous voulez exposer <<<
+
+  /// Checks if biometric authentication is available on the device.
+  Future<bool?> canCheckBiometrics() {
+    throw UnimplementedError('canCheckBiometrics() has not been implemented.');
+  }
+
+  /// Gets the list of available biometrics (e.g., face, fingerprint).
+  /// Note: This is an example, typically `canCheckBiometrics` is enough for basic use.
+  /// You might want to remove this if not strictly needed.
+  Future<List<String>?> getAvailableBiometrics() {
+    throw UnimplementedError('getAvailableBiometrics() has not been implemented.');
+  }
+
+  /// Authenticates the user using biometrics.
+  /// Returns true if authentication is successful, false otherwise.
+  Future<bool?> authenticate() {
+    throw UnimplementedError('authenticate() has not been implemented.');
   }
 }
